@@ -34,11 +34,15 @@ export default function Navbar() {
         isSticky
           ? "fixed top-0 left-0 right-0 bg-[#12123E] text-white border-gray-200 dark:bg-gray-900"
           : "bg-[#12123E] text-white border-gray-200 dark:bg-gray-900"
-      } ${isSticky ? "h-[70px]" : ""} transition-all duration-2000`}
+      } ${isSticky ? "p-1" : ""} transition-all duration-2000`}
+      style={{ zIndex: 1000 }} // Set a higher z-index value for the navbar
     >
-      <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+      <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto lg:p-4">
+        <a
+          href="https://flowbite.com/"
+          className="flex items-center p-4 lg:p-0"
+        >
+          <span className="self-center lg:text-2xl font-semibold whitespace-nowrap dark:text-white">
             Farhan's Portfolio
           </span>
         </a>
@@ -66,13 +70,15 @@ export default function Navbar() {
         </button>
         <div
           className={`${
-            isMobileMenuOpen ? "block md:hidden" : "hidden"
+            isMobileMenuOpen
+              ? "block md:hidden bg-[#12123E]" // Set background color for the mobile menu block when it's open
+              : "hidden"
           } w-full md:block md:w-auto`}
           id="navbar-default"
         >
           {/* Mobile menu content */}
           <div className="flex flex-col justify-center items-center">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
+            <ul className="font-medium flex flex-col p-0 md:p-0 py-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
               <li>
                 <Link
                   to="hero"

@@ -28,6 +28,10 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <div
       className={`${
@@ -35,7 +39,7 @@ export default function Navbar() {
           ? "fixed top-0 left-0 right-0 bg-[#12123E] text-white border-gray-200 dark:bg-gray-900"
           : "bg-[#12123E] text-white border-gray-200 dark:bg-gray-900"
       } ${isSticky ? "p-1" : ""} transition-all duration-2000`}
-      style={{ zIndex: 1000 }} // Set a higher z-index value for the navbar
+      style={{ zIndex: 1000 }}
     >
       <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto lg:p-4">
         <a
@@ -71,12 +75,11 @@ export default function Navbar() {
         <div
           className={`${
             isMobileMenuOpen
-              ? "block md:hidden bg-[#12123E]" // Set background color for the mobile menu block when it's open
-              : "hidden"
-          } w-full md:block md:w-auto`}
+              ? "max-h-screen opacity-100 transition-max-h duration-300 ease-in-out"
+              : "max-h-0 opacity-0 transition-max-h duration-300 ease-in-out"
+          } w-full md:hidden bg-[#12123E]`}
           id="navbar-default"
         >
-          {/* Mobile menu content */}
           <div className="flex flex-col justify-center items-center">
             <ul className="font-medium flex flex-col p-0 md:p-0 py-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
               <li>
@@ -85,6 +88,7 @@ export default function Navbar() {
                   smooth={true}
                   duration={500}
                   className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#9191c4] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover-bg-transparent transition-colors duration-2000 cursor-pointer"
+                  onClick={closeMobileMenu} // Close mobile menu when an option is clicked
                 >
                   Home
                 </Link>
@@ -94,7 +98,8 @@ export default function Navbar() {
                   to="contact"
                   smooth={true}
                   duration={500}
-                  className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#9191c4] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent transition-colors duration-2000 cursor-pointer"
+                  className="block py-2 pl-3 pr-4 rounded hover-bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#9191c4] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover-bg-gray-700 dark:hover-text-white md:dark:hover-bg-transparent transition-colors duration-2000 cursor-pointer"
+                  onClick={closeMobileMenu} // Close mobile menu when an option is clicked
                 >
                   Contact
                 </Link>

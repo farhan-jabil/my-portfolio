@@ -2,35 +2,38 @@ body {
     background-color: #000027;
 }
 
-@media screen and (min-width: 1300px) {
-    .container {
-        max-width: 1200px; /* Make sure the container doesn't exceed the viewport width */
-        margin: 0 auto;
-        padding-left: 20px; /* Adjust this as needed for smaller screens */
-        padding-right: 20px; /* Adjust this as needed for smaller screens */
-    }
+.container {
+    margin: 0 auto;
+    padding-left: 20px; /* Adjust this as needed for smaller screens */
+    padding-right: 20px; /* Adjust this as needed for smaller screens */
 }
-
-@media screen and (max-width: 1299px) {
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding-left: 10px; /* Adjust for smaller screens */
-        padding-right: 10px; /* Adjust for smaller screens */
-    }
-}
-
 
 /* Responsive adjustments */
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 1300px) {
     .container {
-        max-width: 700px;
-        padding-left: 10px; /* Adjust for smaller screens */
-        padding-right: 10px; /* Adjust for smaller screens */
+        max-width: 1200px;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1081px) and (max-width: 1299px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .container {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .container {
         max-width: 300px;
     }

@@ -5,7 +5,6 @@ export default function About() {
     <>
       <hr className="w-4/5 mx-auto" />
       <section id="about" className="container py-12 md:py-24 lg:py-28">
-        <div class="py-8 px-4 lg:px-8">
           <div class="mx-auto text-left space-y-10">
             <h2 class="text-3xl lg:text-4xl font-semibold text-center text-gray-300 mb-4">
               About Me
@@ -65,7 +64,6 @@ export default function About() {
               experiences together.
             </p>
           </div>
-        </div>
       </section>
     </>
   );

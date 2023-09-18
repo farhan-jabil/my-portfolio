@@ -4,8 +4,8 @@ export default function About() {
   return (
     <>
       <hr className="w-4/5 mx-auto" />
-      <section id="about" className="container">
-          <div class="mx-auto text-left space-y-10 py-12 md:py-24 lg:py-28">
+      <section id="about" className="">
+          <div class="container mx-auto text-left space-y-10 py-12 md:py-24 lg:py-28">
             <h2 class="text-3xl lg:text-4xl font-semibold text-center text-gray-300 mb-4">
               About Me
             </h2>

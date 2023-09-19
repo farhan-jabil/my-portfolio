@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <>
       <hr className="w-4/5 mx-auto" />
-      <section id="contact" className="container pt-12 pb-52 md:pt-24 lg:pt-24 text-white text-center">
+      <section id="contact" className="containerr pt-12 pb-52 md:pt-24 lg:pt-24 text-white text-center">
         <div className="mx-auto px-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">Contact Me</h2>
           <div className="space-y-2 mt-6 md:mt-9 md:flex md:flex-col md:items-center">

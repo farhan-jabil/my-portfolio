@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <>
       <section id="hero">
-        <div className="container flex flex-col md:flex-row justify-between w-[80%] m-auto py-8 lg:py-32">
+        <div className="containerr flex flex-col md:flex-row justify-between w-[80%] m-auto py-8 lg:py-32">
           <div className="flex items-center">
             <div className="">
               <p className="text-[15px] lg:text-[25px] font-[400] text-[#ffffff]">

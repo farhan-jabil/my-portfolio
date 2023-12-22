@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -28,22 +29,6 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  const scrollToSection = (sectionId) => {
-    const section = document.querySelector(sectionId);
-    if (section) {
-      const navbarHeight = navbarRef.current.clientHeight; // Get the height of the navbar
-      window.scrollTo({
-        top: section.offsetTop - navbarHeight,
-        behavior: "smooth",
-      });
-    }
-    closeMobileMenu(); // Close the mobile menu after clicking a link
-  };
-
   return (
     <div
       ref={navbarRef} // Set a reference to the navbar element
@@ -65,28 +50,37 @@ export default function Navbar() {
         </a>
         <ul className="font-medium hidden md:flex p-0 space-x-8">
           <li>
-            <button
-              onClick={() => scrollToSection("#hero")}
-              className="hover:text-[#9191c4] focus:outline-none"
+            <ScrollLink
+              to="hero"
+              smooth={true}
+              duration={500}
+              className="nav-link cursor-pointer hover:text-[#9191c4] focus:outline-none"
+              activeclassname="active"
             >
               Home
-            </button>
+            </ScrollLink>
           </li>
           <li>
-            <button
-              onClick={() => scrollToSection("#about")}
-              className="hover:text-[#9191c4] focus:outline-none"
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              className="nav-link cursor-pointer hover:text-[#9191c4] focus:outline-none"
+              activeclassname="active"
             >
               About
-            </button>
+            </ScrollLink>
           </li>
           <li>
-            <button
-              onClick={() => scrollToSection("#contact")}
-              className="hover:text-[#9191c4] focus:outline-none"
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="nav-link cursor-pointer hover:text-[#9191c4] focus:outline-none"
+              activeclassname="active"
             >
               Contact
-            </button>
+            </ScrollLink>
           </li>
         </ul>
         <button
@@ -129,28 +123,55 @@ export default function Navbar() {
           <div className="flex flex-col justify-center items-center">
             <ul className="font-medium flex flex-col p-0 py-4 rounded-lg space-y-4">
               <li>
-                <button
+                {/* <button
                   onClick={() => scrollToSection("#hero")}
                   className="hover:text-[#9191c4] focus:outline-none"
                 >
                   Home
-                </button>
+                </button> */}
+                <ScrollLink
+                  to="hero"
+                  smooth={true}
+                  duration={500}
+                  className="nav-link cursor-pointer"
+                  activeclassname="active"
+                >
+                  Home
+                </ScrollLink>
               </li>
               <li>
-                <button
+                {/* <button
                   onClick={() => scrollToSection("#about")}
                   className="hover:text-[#9191c4] focus:outline-none"
                 >
                   About
-                </button>
+                </button> */}
+                <ScrollLink
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  className="nav-link cursor-pointer"
+                  activeclassname="active"
+                >
+                  About
+                </ScrollLink>
               </li>
               <li>
-                <button
+                {/* <button
                   onClick={() => scrollToSection("#contact")}
                   className="hover:text-[#9191c4] focus:outline-none"
                 >
                   Contact
-                </button>
+                </button> */}
+                <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  className="nav-link cursor-pointer"
+                  activeclassname="active"
+                >
+                  Contact
+                </ScrollLink>
               </li>
             </ul>
           </div>

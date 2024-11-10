@@ -12,7 +12,7 @@ export default function About() {
           <p className="text-lg lg:text-xl text-gray-400 mb-6">
             Hello, I'm Farhan Hassan Jabil, a passionate software engineer with
             a deep-rooted expertise in front-end development, specializing in
-            React and Angular. With a strong foundation in modern web
+            React and Tailwind. With a strong foundation in modern web
             technologies and a knack for crafting elegant user interfaces, I'm
             dedicated to delivering exceptional digital experiences.
           </p>
@@ -23,7 +23,7 @@ export default function About() {
           <p className="text-lg lg:text-xl text-gray-400 mb-6">
             As a seasoned developer, I thrive on turning complex ideas into
             intuitive and visually appealing web applications. My proficiency
-            extends beyond React, encompassing Angular, Node.js, Express.js,
+            extends beyond React, Node.js, Express.js,
             MongoDB, and Mongoose. This versatile skill set allows me to
             seamlessly bridge the gap between front-end and back-end
             development, creating cohesive and feature-rich solutions.

@@ -40,7 +40,7 @@ export default function Hero() {
             </span>
           </h1>
           <p
-            className="hero-in mt-6 max-w-xl text-lg leading-relaxed text-ink/70"
+            className="hero-in mt-6 max-w-xl text-lg leading-relaxed text-justify text-ink/70"
             style={d(650)}
           >
             {profile.tagline}

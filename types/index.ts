@@ -23,10 +23,20 @@ export interface NavItem {
   href: string;
 }
 
-export interface ExperienceItem {
-  role: string;
-  company: string;
+export interface ExperienceRole {
+  title: string;
   period: string;
+}
+
+export interface ExperienceProject {
+  name: string;
+  url?: string;
+}
+
+export interface ExperienceItem {
+  company: string;
+  roles: ExperienceRole[];
+  projects: ExperienceProject[];
   points: string[];
 }
 

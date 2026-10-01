@@ -1,6 +1,7 @@
 import {
   about,
   experience,
+  education,
   skills,
   projects,
   profile,
@@ -19,7 +20,7 @@ function Section({ id, title, children }: SectionProps) {
     <section id={id} className="scroll-mt-16 border-t border-blueprint/15">
       <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
         <Reveal>
-          <h2 className="mb-12 font-display text-4xl font-bold text-blueprint md:text-5xl">
+          <h2 className="mb-12 font-display text-4xl font-bold text-blueprint md:text-5xl text-center">
             {title}
           </h2>
         </Reveal>
@@ -36,6 +37,28 @@ export function About() {
         {about.map((p, i) => (
           <Reveal key={i} delay={i * 150}>
             <p>{p}</p>
+          </Reveal>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+export function Education() {
+  return (
+    <Section id="education" title="Education">
+      <div className="grid gap-6 md:grid-cols-3">
+        {education.map((ed, i) => (
+          <Reveal key={ed.degree} delay={i * 130}>
+            <div className="h-full rounded-2xl border border-blueprint/25 bg-paper/70 p-7 transition duration-300 hover:-translate-y-2 hover:border-signal/60 hover:shadow-2xl hover:shadow-signal/10">
+              <p className="font-display text-4xl font-bold text-signal">
+                {ed.year}
+              </p>
+              <h3 className="mt-4 font-display text-xl font-semibold">
+                {ed.degree}
+              </h3>
+              <p className="mt-2 text-ink/70">{ed.institution}</p>
+            </div>
           </Reveal>
         ))}
       </div>

@@ -23,6 +23,12 @@ export interface NavItem {
   href: string;
 }
 
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  year: string;
+}
+
 export interface ExperienceRole {
   title: string;
   period: string;

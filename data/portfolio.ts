@@ -5,6 +5,7 @@ import type {
   Profile,
   Project,
   SkillGroup,
+  EducationItem,
 } from "../types";
 import myImage from "@/public/my_photo.jpeg";
 
@@ -14,20 +15,24 @@ export const profile: Profile = {
   tagline:
     "I’m a Software Engineer who loves turning ideas into functional, meaningful software. I’m constantly learning, building, and improving to create better digital experiences.",
   location: "Dhaka, Bangladesh",
-  email: "you@example.com",
+  email: "farhanhasan295@gmail.com",
   status: "Open to work",
   image: myImage,
   chips: ["Frontend Development", "React & Next.js", "UI/UX Implementation"],
   cv: "/Farhan-CV.pdf", // put your file in /public with this name
   socials: [
-    { label: "GitHub", href: "https://github.com/" },
-    { label: "LinkedIn", href: "https://linkedin.com/" },
+    { label: "GitHub", href: "https://github.com/farhan-jabil" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/farhan-hasan-751066162",
+    },
   ],
 };
 
 export const nav: NavItem[] = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
@@ -37,6 +42,24 @@ export const about: string[] = [
   "I’m a Software Engineer with a background in Computer Science and Engineering, focused on building modern, responsive, and user-friendly web applications. My experience is mainly centered around frontend development with React and Next.js, where I enjoy turning designs and ideas into polished, functional products.",
 
   "I’m continuously expanding my skills beyond the frontend, currently developing my backend knowledge with Java and Spring Boot. I enjoy learning by building real-world projects, solving practical problems, and improving the way I write and structure software. I’m looking to grow as a well-rounded software engineer while building products that are reliable, maintainable, and genuinely useful.",
+];
+
+export const education: EducationItem[] = [
+  {
+    degree: "B.Sc. in Computer Science & Engineering",
+    institution: "American International University-Bangladesh (AIUB)",
+    year: "2022",
+  },
+  {
+    degree: "Higher Secondary Certificate (HSC)",
+    institution: "BAF Shaheen College, Dhaka",
+    year: "2017",
+  },
+  {
+    degree: "Secondary School Certificate (SSC)",
+    institution: "BB Govt. Boys High School, Tangail",
+    year: "2015",
+  },
 ];
 
 export const experience: ExperienceItem[] = [
@@ -228,17 +251,5 @@ export const projects: Project[] = [
     desc: "Work Stream is a full-stack employee management platform designed to streamline leave requests, approvals, employee records, and administrative workflow.",
     tags: ["Next.js", "Tailwind", "Node.js", "Express", "MongoDB"],
     link: "https://work-stream-fj.vercel.app/",
-  },
-  {
-    title: "Project Two",
-    desc: "One sentence on what it is and the problem it solves.",
-    tags: ["Node.js", "Express"],
-    link: "#",
-  },
-  {
-    title: "Project Three",
-    desc: "One sentence on what it is and the problem it solves.",
-    tags: ["Java", "Spring Boot"],
-    link: "#",
   },
 ];

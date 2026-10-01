@@ -19,7 +19,7 @@ export const profile: Profile = {
   status: "Open to work",
   image: myImage,
   chips: ["Frontend Development", "React & Next.js", "UI/UX Implementation"],
-  cv: "/Farhan-CV.pdf", // put your file in /public with this name
+  cv: "/Farhan_Hassan_Jabil.pdf",
   socials: [
     { label: "GitHub", href: "https://github.com/farhan-jabil" },
     {
